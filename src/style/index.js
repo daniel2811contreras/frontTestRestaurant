@@ -31,12 +31,25 @@ export const ApliStyle = style({
                     color: Color.while,
                     borderStyle: 'solid',
                     borderWidth: '0px',
-                    padding: '8px 10px'
+                    padding: '8px 10px',
+                    $nest: {
+                        '&:hover': {
+                            backgroundColor: Color.contras,
+                        }
+                    }
                 },
                 '& .list': {
                     display: 'flex',
                     flexDirection: 'column',
                     $nest: {
+                        '&.reservation': {
+                            marginBottom: '50px',
+                            $nest: {
+                                '& .item': {
+                                    gridTemplateColumns: 'repeat(3, 1fr)',
+                                } 
+                            }
+                        },
                         '& .th': {
                             textAlign: 'center',
                             color: Color.contras,
@@ -67,6 +80,47 @@ export const ApliStyle = style({
                                 }
                             }
                         }
+                    }
+                },
+                '& .create': {
+                    flexDirection: 'column',
+                    $nest: {
+                        '& button': {
+                            width: '100%'
+                        }
+                    }
+                },
+                '& .groupInput': {
+                    marginBottom: '15px',
+                    width: '100%',
+                    $nest: {
+                        '& div': {
+                            color: Color.contras,
+                            marginBottom: '10px',
+                        },
+                        '& input': {
+                            borderColor: Color.contras,
+                            borderStyle: 'solid',
+                            borderWidth: '1px',
+                            padding: '5px',
+                            borderRadius: '10px',
+                            width: 'calc(100% - 10px)',
+                            $nest: {
+                                '&:disabled': {
+                                    cursor: 'no-drop'
+                                }
+                            }
+                        }
+                    }
+                },
+                '& .groupDate': {
+                    marginBottom: '15px',
+                    width: '100%',
+                    $nest: {
+                        '& .div': {
+                            color: Color.contras,
+                            marginBottom: '10px',
+                        },
                     }
                 }
             }

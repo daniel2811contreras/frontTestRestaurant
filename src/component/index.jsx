@@ -1,6 +1,10 @@
 import React from 'react'
 // compone
 import List from './list'
+import Create from './create'
+import Edit from './edit'
+import Show from './show'
+import Reserva from './reserva'
 // style
 import {ApliStyle} from '../style'
 const Apli = () => {
@@ -10,7 +14,10 @@ const Apli = () => {
                 <List />
             </div>
             <div className='cont'>
-                form
+                <Create />
+                <Edit />
+                <Show />
+                <Reserva />
             </div>
         </div>
     )
